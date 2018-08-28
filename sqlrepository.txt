@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="com.example.user.management.domain.repository.search.SearchRepository">
+
+	<resultMap id="searchResultMap" type="Account">
+		<id property="userID" column="userID" />
+		<result property="userName" column="userName" />
+		<result property="birthday" column="birthday" />
+		<result property="address" column="address" />
+		<result property="phoneNumber" column="phoneNumber" />
+		<result property="state" column="state" />
+		<result property="role" column="role" />
+
+	</resultMap>
+
+	<select id="findUser" parameterType="Account"
+		resultMap="searchResultMap">
+		<!-- ŒÂ•Ê -->
+		SELECT
+		*
+		FROM
+		t_users
+
+		<if test="role != null"> INNER JOIN t_role ON t_users.userID = t_role.userID</if>
+		<where>
+			<if test="role != null">
+				AND
+				role = #{role}
+			</if>
+			<if test="userID != null">
+				AND
+				userID = #{userID}
+			</if>
+			<if test="userName != null">
+				AND
+				userName = #{userName}
+			</if>
+			<if test="birthday != null">
+				AND
+				birthday = #{birthday}
+			</if>
+			<if test="address != null">
+				AND
+				address LIKE #{address} ESCAPE '~'
+			</if>
+			<if test="phoneNumber != null">
+				AND
+				phoneNumber LIKE #{phoneNumber} ESCAPE '~'
+			</if>
+			<if test="state != null">
+				AND
+				state = #{state}
+			</if>
+		</where>
+		ORDER BY
+		t_users.userID
+	</select>
+
+	<select id="findAll" parameterType="String"
+		resultMap="searchResultMap">
+		SELECT
+		t_users.userID,
+		t_users.userName,
+		t_users.birthday,
+		t_users.address,
+		t_users.phoneNumber,
+		t_users.state,
+		t_role.role
+		FROM
+		t_users
+		INNER JOIN
+		t_role
+		ON
+		t_users.userID=t_role.userID;
+	</select>
+
+</mapper>

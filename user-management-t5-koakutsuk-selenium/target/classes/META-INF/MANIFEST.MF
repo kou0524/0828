@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: user-management-t5-koakutsuk-selenium
+Implementation-Version: 1.0.0-SNAPSHOT
+Built-By: 4959003
+Implementation-Vendor-Id: com.example.user.management
+Build-Jdk: 1.8.0_171
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: TERASOLUNA Framework Team
+

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="com.example.user.management.domain.repository.search.SearchRepository">
+
+	<resultMap id="searchResultMap" type="Account">
+		<id property="userID" column="userID" />
+		<result property="userName" column="userName" />
+		<result property="birthday" column="birthday" />
+		<result property="address" column="address" />
+		<result property="phoneNumber" column="phoneNumber" />
+		<result property="state" column="state" />
+		<result property="role" column="role" />
+
+	</resultMap>
+
+	<!-- 個別入力値での検索。 -->
+	<select id="findUser" parameterType="Account"
+		resultMap="searchResultMap">
+		<!-- 個別入力値での検索。 -->
+		SELECT
+		t_users.userID,
+		t_users.userName,
+		t_users.birthday,
+		t_users.address,
+		t_users.phoneNumber,
+		t_users.state,
+		string_agg(t_role.role,'/'ORDER BY t_role.userID) AS role
+		FROM
+		t_users
+		INNER JOIN
+		t_role
+		ON
+		t_users.userID=t_role.userID
+		<where>
+			<if test="role != ''">
+				AND
+				role = #{role}
+			</if>
+
+			<if test="userID != ''">
+				AND
+				t_users.userID = #{userID}
+			</if>
+			<if test="userName !=''">
+				AND
+				userName = #{userName}
+			</if>
+			<if test="birthday != null">
+				AND
+				birthday = #{birthday}
+			</if>
+			<if test="address != ''">
+				AND
+				address = #{address}
+			</if>
+			<if test="phoneNumber != ''">
+				AND
+				phoneNumber = #{phoneNumber}
+			</if>
+			<if test="state !=''">
+				AND
+				state = #{state}
+			</if>
+			AND
+			state = 'ACTV'
+		</where>
+		GROUP BY
+		t_users.userID
+		ORDER BY
+		t_users.userID
+
+	</select>
+
+	<!-- 件数カウント -->
+	<select id="countByCriteria" resultType="_long">
+		<!-- INNER JOIN でカウントしてしまっている →0001は、権限が2つあるため、INNNER JOINすることで、ADMNをもつ0001とUSERを持つ0001が誕生し、見かけ上1件追加されてしまう。 
+			INNER JOINは、権限が選択 -->
+
+		SELECT
+		count(*)
+		FROM
+		t_users
+		<if test="role != ''">
+			INNER JOIN
+			t_role
+			ON
+			t_users.userID =
+			t_role.userID
+		</if>
+		<where>
+			<if test="userID != ''">
+				AND
+				t_users.userID = #{userID}
+			</if>
+			<if test="userName !=''">
+				AND
+				userName = #{userName}
+			</if>
+			<if test="birthday != null">
+				AND
+				birthday = #{birthday}
+			</if>
+			<if test="address != ''">
+				AND
+				address = #{address}
+			</if>
+			<if test="phoneNumber != ''">
+				AND
+				phoneNumber = #{phoneNumber}
+			</if>
+			<if test="state !=''">
+				AND
+				state = #{state}
+			</if>
+			<if test="role != ''">
+				AND
+				role = #{role}
+			</if>
+			AND
+			state = 'ACTV'
+		</where>
+	</select>
+
+
+
+</mapper>

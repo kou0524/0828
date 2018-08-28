@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--create role -->
+<mapper
+	namespace="com.example.user.management.domain.repository.userrole.RoleRepository">
+
+	<resultMap id="roleResultMap" type="Role">
+		<id property="userID" column="userID" />
+		<result property="role" column="role" />
+	</resultMap>
+	<insert id="createRole" parameterType="Role">
+
+		INSERT INTO
+		t_role
+		(
+		userID,
+		role
+		)
+		VALUES
+		(
+		#{userID}
+		,#{role}
+		)
+	</insert>
+
+</mapper>

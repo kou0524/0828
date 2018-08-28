@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="com.example.user.management.domain.repository.delete.DeleteRepository">
+
+	<resultMap id="accountResultMap" type="Account">
+		<id property="userID" column="userID" />
+		<result property="userName" column="userName" />
+		<result property="birthday" column="birthday" />
+		<result property="address" column="address" />
+		<result property="phoneNumber" column="phoneNumber" />
+		<result property="password" column="password" />
+		<result property="state" column="state" />
+		<result property="lastUpdateTime" column="lastUpdateTime" />
+
+	</resultMap>
+
+	<update id="delete" parameterType="Account">
+		UPDATE
+		t_users
+		SET
+		state =
+		'RMVD'
+		WHERE
+		userID = #{userID}
+	</update>
+	
+	<select id="findOne" resultMap="accountResultMap">
+		SELECT
+		t_users.userID,
+		t_users.userName,
+		t_users.birthday,
+		t_users.address,
+		t_users.phoneNumber,
+		t_users.state,
+		string_agg(t_role.role,'/'ORDER BY t_role.userID) AS role
+		FROM
+		t_users
+		INNER JOIN
+		t_role
+		ON
+		t_users.userID=t_role.userID
+		WHERE
+		t_users.userID = #{userID}
+		GROUP BY
+		t_users.userID
+	</select>
+
+</mapper>
