@@ -26,8 +26,11 @@ public class AccountService {
 	RoleRepository RoleRepository;
 	
 	public void create(Account account, String password,Role role) {
+		//stateはACTV
 		account.setState("ACTV");
+		//パスワードをハッシュ化
 		account.setPassword(passwordEncoder.encode(password));
+		//権限以外の情報を登録
 		accountRepository.create(account);
 		
 		//登録する権限内容を取得して、リストに格納（ADMN　USER　AMDN/USER）

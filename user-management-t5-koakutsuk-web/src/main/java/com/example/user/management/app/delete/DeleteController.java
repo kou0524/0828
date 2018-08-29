@@ -1,7 +1,6 @@
 package com.example.user.management.app.delete;
 
 
-import java.sql.Timestamp;
 
 import javax.inject.Inject;
 
