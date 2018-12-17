@@ -13,7 +13,7 @@
 
     <tx:annotation-driven/>
 
-    <import resource="classpath:META-INF/spring/user-management-t5-koakutsuk-infra.xml" />
+    <import resource="classpath:META-INF/spring/unko-t5-koakutsuk-infra.xml" />
     <import resource="classpath*:META-INF/spring/**/*-codelist.xml" />
     
     <context:component-scan base-package="com.example.user.management.domain" />

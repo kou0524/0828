@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.example.user.management</groupId>
-    <artifactId>user-management-t5-koakutsuk</artifactId>
+    <groupId>tinko.user.management</groupId>
+    <artifactId>ANACONDA-t5-koakutsuk</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <parent>
@@ -112,17 +112,17 @@
         <dependencies>
             <dependency>
                 <groupId>${project.groupId}</groupId>
-                <artifactId>user-management-t5-koakutsuk-domain</artifactId>
+                <artifactId>ANACONDA-t5-koakutsuk-domain</artifactId>
                 <version>1.0.0-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>${project.groupId}</groupId>
-                <artifactId>user-management-t5-koakutsuk-web</artifactId>
+                <artifactId>ANACONDA-t5-koakutsuk-web</artifactId>
                 <version>1.0.0-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>${project.groupId}</groupId>
-                <artifactId>user-management-t5-koakutsuk-env</artifactId>
+                <artifactId>ANACONDA-t5-koakutsuk-env</artifactId>
                 <version>1.0.0-SNAPSHOT</version>
             </dependency>
 
@@ -172,10 +172,10 @@
         <java-version>1.8</java-version>
     </properties>
   <modules>
-    <module>user-management-t5-koakutsuk-env</module>
-    <module>user-management-t5-koakutsuk-domain</module>
-    <module>user-management-t5-koakutsuk-web</module>
-    <module>user-management-t5-koakutsuk-initdb</module>
-    <module>user-management-t5-koakutsuk-selenium</module>
+    <module>ANACONDA-t5-koakutsuk-env</module>
+    <module>ANACONDA-t5-koakutsuk-domain</module>
+    <module>ANACONDA-t5-koakutsuk-web</module>
+    <module>ANACONDA-t5-koakutsuk-initdb</module>
+    <module>ANACONDA-t5-koakutsuk-selenium</module>
   </modules>
 </project>

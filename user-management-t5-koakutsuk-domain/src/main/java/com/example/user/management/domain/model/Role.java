@@ -1,4 +1,4 @@
-package com.example.user.management.domain.model;
+package ANACONDA;
 
 
 import java.io.Serializable;

@@ -7,7 +7,7 @@
         http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd
     ">
 
-    <import resource="classpath:/META-INF/spring/user-management-t5-koakutsuk-env.xml" />
+    <import resource="classpath:/META-INF/spring/unko-t5-koakutsuk-env.xml" />
 
     <!-- define the SqlSessionFactory -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">

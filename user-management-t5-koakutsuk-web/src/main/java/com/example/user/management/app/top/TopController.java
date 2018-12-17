@@ -6,7 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.example.user.management.domain.model.Account;
+import ANACONDA.Account;
 import com.example.user.management.domain.service.userdetails.SampleUserDetails;
 
 @Controller

@@ -1,6 +1,6 @@
 package com.example.user.management.domain.repository.account;
 
-import com.example.user.management.domain.model.Account;
+import ANACONDA.Account;
 
 
 public interface AccountRepository {

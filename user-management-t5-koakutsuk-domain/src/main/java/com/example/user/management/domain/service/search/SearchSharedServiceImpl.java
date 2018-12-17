@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 
-import com.example.user.management.domain.model.Account;
+import ANACONDA.Account;
 import com.example.user.management.domain.repository.search.SearchRepository;
 import com.example.user.management.domain.repository.userrole.RoleRepository;
 

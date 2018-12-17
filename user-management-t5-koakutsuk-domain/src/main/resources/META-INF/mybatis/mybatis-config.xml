@@ -17,7 +17,7 @@
     </settings>
 
     <typeAliases>
-        <package name="com.example.user.management.domain.model" />
+        <package name="ANACONDA" />
         <package name="com.example.user.management.domain.repository" />
 <!--
         <package name="com.example.user.management.infra.mybatis.typehandler" />

@@ -2,7 +2,7 @@ package com.example.user.management.domain.service.userdetails;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.User;
 
-import com.example.user.management.domain.model.Account;
+import ANACONDA.Account;
 
 public class SampleUserDetails extends User { // (1)
     private static final long serialVersionUID = 1L;

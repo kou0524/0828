@@ -19,8 +19,8 @@ import org.terasoluna.gfw.common.message.ResultMessages;
 import com.example.user.management.app.account.AccountCreateForm;
 import com.example.user.management.app.account.IllegalOperationException;
 import com.example.user.management.app.validation.PasswordEqualsValidator;
-import com.example.user.management.domain.model.Account;
-import com.example.user.management.domain.model.Role;
+import ANACONDA.Account;
+import ANACONDA.Role;
 import com.example.user.management.domain.service.account.AccountService;
 
 @Controller

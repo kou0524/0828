@@ -1,4 +1,4 @@
-package com.example.user.management.domain.model;
+package ANACONDA;
 
 import org.terasoluna.gfw.common.codelist.EnumCodeList;
 

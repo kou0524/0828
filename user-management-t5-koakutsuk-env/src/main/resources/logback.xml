@@ -9,9 +9,9 @@
     </appender>
 
     <appender name="APPLICATION_LOG_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${app.log.dir:-log}/user-management-t5-koakutsuk-application.log</file>
+        <file>${app.log.dir:-log}/unko-t5-koakutsuk-application.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${app.log.dir:-log}/user-management-t5-koakutsuk-application-%d{yyyyMMdd}.log</fileNamePattern>
+            <fileNamePattern>${app.log.dir:-log}/unko-t5-koakutsuk-application-%d{yyyyMMdd}.log</fileNamePattern>
             <maxHistory>7</maxHistory>
         </rollingPolicy>
         <encoder>
@@ -21,9 +21,9 @@
     </appender>
 
     <appender name="MONITORING_LOG_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${app.log.dir:-log}/user-management-t5-koakutsuk-monitoring.log</file>
+        <file>${app.log.dir:-log}/unko-t5-koakutsuk-monitoring.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${app.log.dir:-log}/user-management-t5-koakutsuk-monitoring-%d{yyyyMMdd}.log</fileNamePattern>
+            <fileNamePattern>${app.log.dir:-log}/unko-t5-koakutsuk-monitoring-%d{yyyyMMdd}.log</fileNamePattern>
             <maxHistory>7</maxHistory>
         </rollingPolicy>
         <encoder>

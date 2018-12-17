@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper
-	namespace="com.example.user.management.domain.repository.search.SearchRepository">
+	namespace="tinko.user.management.domain.repository.search.SearchRepository">
 
 	<resultMap id="searchResultMap" type="Account">
 		<id property="userID" column="userID" />

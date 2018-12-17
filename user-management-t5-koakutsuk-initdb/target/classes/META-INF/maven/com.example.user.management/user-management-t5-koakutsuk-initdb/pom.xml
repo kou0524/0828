@@ -4,12 +4,12 @@
 
     <parent>
         <groupId>com.example.user.management</groupId>
-        <artifactId>user-management-t5-koakutsuk</artifactId>
+        <artifactId>unko-t5-koakutsuk</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>user-management-t5-koakutsuk-initdb</artifactId>
+    <artifactId>unko-t5-koakutsuk-initdb</artifactId>
 
     <profiles>
         <profile>

@@ -7,7 +7,7 @@ import javax.inject.Inject;
 import org.springframework.transaction.annotation.Transactional;
 import org.terasoluna.gfw.common.exception.ResourceNotFoundException;
 import org.springframework.stereotype.Service;
-import com.example.user.management.domain.model.Account;
+import ANACONDA.Account;
 import com.example.user.management.domain.repository.delete.DeleteRepository;
 
 @Service

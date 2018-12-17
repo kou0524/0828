@@ -1,6 +1,6 @@
 package com.example.user.management.domain.repository.delete;
 
-import com.example.user.management.domain.model.Account;
+import ANACONDA.Account;
 
 public interface DeleteRepository {
 	void delete(Account account);

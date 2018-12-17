@@ -5,7 +5,7 @@ import java.util.List;
 import org.apache.ibatis.session.RowBounds;
 
 
-import com.example.user.management.domain.model.Account;
+import ANACONDA.Account;
 
 //インタフェースのみ定義する。データアクセスなどの実装は行わない。searchsharedoserviceとがったいさせても問題ない？
 public interface SearchRepository {

@@ -8,8 +8,8 @@ import javax.inject.Inject;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.example.user.management.domain.model.Account;
-import com.example.user.management.domain.model.Role;
+import ANACONDA.Account;
+import ANACONDA.Role;
 import com.example.user.management.domain.repository.account.AccountRepository;
 import com.example.user.management.domain.repository.userrole.RoleRepository;
 

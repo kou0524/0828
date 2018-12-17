@@ -10,7 +10,7 @@
 <c:set var="titleKey">
     <tiles:insertAttribute name="title" ignore="true" />
 </c:set>
-<title><spring:message code="${titleKey}" text="user-management-t5-koakutsuk" /></title>
+<title><spring:message code="${titleKey}" text="unko-t5-koakutsuk" /></title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/app/css/styles.css">
 </head>
 <body>

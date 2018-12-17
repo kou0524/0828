@@ -12,7 +12,7 @@
 
     <bean id="exceptionLogger" class="org.terasoluna.gfw.common.exception.ExceptionLogger" />
 
-    <import resource="classpath:META-INF/spring/user-management-t5-koakutsuk-domain.xml" />
+    <import resource="classpath:META-INF/spring/unko-t5-koakutsuk-domain.xml" />
 
     <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
         <property name="dataSource" ref="dataSource" />

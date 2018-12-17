@@ -19,8 +19,8 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.example.user.management.app.validation.PhoneNumberValidator;
 import com.example.user.management.app.validation.UserIDValidator;
-import com.example.user.management.domain.model.Account;
-import com.example.user.management.domain.model.SearchCriteria;
+import ANACONDA.Account;
+import ANACONDA.SearchCriteria;
 import com.example.user.management.domain.service.search.SearchSharedService;
 
 

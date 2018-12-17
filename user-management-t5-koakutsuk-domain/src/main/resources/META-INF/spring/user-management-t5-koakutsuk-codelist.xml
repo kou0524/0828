@@ -21,13 +21,13 @@
 	<bean id="CL_ROLESSTATUS"
 		class="org.terasoluna.gfw.common.codelist.EnumCodeList">
 		<constructor-arg
-			value="com.example.user.management.domain.model.UserRole" />
+			value="ANACONDA.UserRole" />
 	</bean>
 
 	<bean id="CL_USERSTATE"
 		class="org.terasoluna.gfw.common.codelist.EnumCodeList">
 		<constructor-arg
-			value="com.example.user.management.domain.model.UserState" />
+			value="ANACONDA.UserState" />
 	</bean>
 
 	<!-- Example for usage of AbstractJdbcCodeList <bean id="CL_SAMPLE" parent="AbstractJdbcCodeList"> 

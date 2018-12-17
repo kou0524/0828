@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.terasoluna.gfw.common.exception.ResourceNotFoundException;
 
-import com.example.user.management.domain.model.Account;
+import ANACONDA.Account;
 import com.example.user.management.domain.repository.account.AccountRepository;
 
 @Service
